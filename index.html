@@ -18,14 +18,32 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
     <style>
+      @font-face {
+        font-family: "Inter-Bold";
+        src: url("./fonts/Inter-Bold.ttf");
+      }
+
+      @font-face {
+        font-family: "Inter-Regular";
+        src: url("./fonts/Inter-Regular.ttf");
+      }
+
+      * {
+        font-family: "Inter-Regular";
+      }
+
       :root {
-        --navy: #0a1b33;
+        --navy: #0e2443;
         --blue: #1e5bff;
         --silver: #b7bdc6;
         --light-gray: #e6e8ec;
         --white: #ffffff;
         --pale: #e6e8ec;
         --ink: #0a1b33;
+      }
+
+      .text-dark{
+        color: #0e2443 !important;
       }
       * {
         box-sizing: border-box;
@@ -58,7 +76,7 @@
         overflow: hidden;
         padding: 38px 20px 90px;
       }
-    
+
       .brand {
         font-weight: 800;
         letter-spacing: -1.8px;
@@ -89,8 +107,8 @@
         overflow: hidden;
       }
       .avatar {
-        width: 94px;
-        height: 94px;
+        width: 13rem;
+        height: 13rem;
         border-radius: 50%;
         display: grid;
         place-items: center;
@@ -188,9 +206,14 @@
         }
       }
 
-      .hero.text-center{
+      .hero.text-center {
         margin: auto;
         max-width: 800px;
+      }
+
+      .name,
+      .worksat {
+        color: #0e2443 !important;
       }
     </style>
   </head>
@@ -208,10 +231,21 @@
       <section class="card profile-card">
         <div class="card-body p-4 p-md-5">
           <div class="d-flex flex-column align-items-center text-center">
-            <div  class="avatar mb-3"><img style="width: 100%;" src="./image/female.png" alt=""></div>
-            <h1 class="h2 fw-bold mb-1">Srishti Ray</h1>
+            <div class="avatar mb-3">
+              <img
+                style="
+                  width: 100%;
+                  border-radius: 50%;
+                  outline: 1mm solid silver;
+                "
+                src="./image/female.jpeg"
+                alt=""
+              />
+            </div>
+            <h1 class="h2 fw-bold mb-1 name">Srishti Ray</h1>
             <p class="text-secondary mb-1">
-              Channel Manager at <strong class="text-dark">RealSell</strong>
+              Channel Manager at
+              <strong class="text-dark worksat">RealSell</strong>
             </p>
             <p class="small-note mb-4">
               <i class="bi bi-geo-alt-fill me-1"></i>Malad West, Mumbai
@@ -240,7 +274,7 @@
           </div>
 
           <hr class="border-light-subtle mb-4" />
-          <h2 class="section-title mb-3">Contact details</h2>
+          <h2 class="section-title mb-3 text-dark">Contact details</h2>
           <div class="d-flex align-items-center gap-3 mb-3">
             <div class="detail-icon"><i class="bi bi-telephone-fill"></i></div>
             <div>
@@ -305,7 +339,7 @@
           </div>
 
           <div class="mt-4 p-3 p-md-4 rounded-4" style="background: #e6e8ec">
-            <h2 class="section-title mb-1">Let’s connect</h2>
+            <h2 class="section-title mb-1 text-dark">Let’s connect</h2>
             <p class="small-note mb-3">
               Connect with Me for real estate enquiries and property
               conversations.
@@ -314,7 +348,7 @@
               <!-- Replace # with Srishti's actual social profile URLs when available. -->
               <a
                 class="social-link"
-                href="https://www.linkedin.com/"
+                href="https://www.linkedin.com/in/srishti-ray-84484b225?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
                 target="_blank"
                 rel="noopener"
                 aria-label="LinkedIn"
@@ -349,12 +383,10 @@
                 ><i class="bi bi-whatsapp"></i
               ></a>
             </div>
-       
           </div>
         </div>
       </section>
-      <footer class="text-center mt-4">
-      </footer>
+      <footer class="text-center mt-4"></footer>
     </main>
 
     <div
